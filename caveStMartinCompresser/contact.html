@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Contact | Cave St Martin</title>
+<link rel="shortcut icon" href=images/logo.webp>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin=anonymous referrerpolicy=no-referrer>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin=anonymous referrerpolicy=no-referrer>
+<link rel=stylesheet href=styles/style.css>
+</head>
+<body>
+<header id=hautPage>
+<div class=logo>
+<a href=index.html><img src=images/logo.webp alt="Logo de la cave"></a>
+</div>
+<div id=burger>
+<i class="fa-solid fa-bars"></i>
+</div>
+<nav id=menuPrincipal>
+<ul>
+<li><a href=index.html class=choix>Accueil</a></li>
+<li><a href=apropos.html>A propos</a></li>
+<li><a href=notreselection.html>Notre sélection</a></li>
+<li><a href=contact.html class=pageActive>Contact</a></li>
+</ul>
+</nav>
+</header>
+<hr>
+<main class=container>
+<h2>Contact</h2>
+<section id=contact>
+<form class=formulaire>
+<p>
+<input type=radio id=monsieur name=civilite><label for=monsieur>Monsieur</label>
+<input type=radio id=madame name=civilite><label for=madame>Madame</label>
+</p>
+<p>
+<input type=text name=nom placeholder="Votre nom">
+</p>
+<p>
+<input type=text name=prenom placeholder="Votre prénom">
+</p>
+<p>
+<input type=email name=email placeholder=Email>
+</p>
+<p>
+<input type=text name=objet placeholder=Objet>
+</p>
+<p>
+<textarea name=message placeholder="Votre message"></textarea>
+</p>
+<p>
+<input type=radio id=rgpd name=rgpd value=rgpd><label for=rgpd>J'autorise ce site à
+utiliser mes données
+personnelles selon notre <a href=politiqueconfidentialite.html>politique de
+confidentialité</a>
+</label>
+</p>
+<p>
+<input type=submit id=envoyer value=Envoyer class=bouton disabled>
+</p>
+</form>
+<div class=map>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2640.2516643050376!2d-3.8560509245826164!3d48.566728521188764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x481167372ecad1a1%3A0xb7b0480453bcbadd!2sCave%20Saint-Martin!5e0!3m2!1sfr!2sfr!4v1701852552947!5m2!1sfr!2sfr" style=border:0 allowfullscreen loading=lazy referrerpolicy=no-referrer-when-downgrade>
+</iframe>
+</div>
+</section>
+</main>
+<footer id=basPage>
+<div class=container>
+<a href=index.html><img class=logoBas src=images/logo.webp alt="Logo de la cave"></a>
+<section id=blocFooter>
+<div class=adresse>
+<h3>Adresse</h3>
+<p>
+Rond point de Kériven, <br>R. Marcellin Berthelot
+<br>
+29600 Saint-Martin-des-Champs
+<br>
+contact@cavesaintmartin.bzh
+<br>
+02 98 88 83 30
+</p>
+</div>
+<div class=reseaux>
+<h3>Réseaux</h3>
+<a href=https://www.facebook.com/cavestmartin/ target=_blank><img src=images/square-facebook.svg alt="Lien page facebook">
+</a>
+<a href=https://www.instagram.com/cavesaintmartin/ target=_blank><img src=images/square-instagram.svg alt="Lien page instagram">
+</a>
+</div>
+<div class=lienDirect>
+<h3>Lien direct</h3>
+<ul>
+<li><a href=index.html>Accueil</a></li>
+<li><a href=apropos.html>A propos</a></li>
+<li><a href=notreselection.html>Notre sélection</a></li>
+<li><a href=contact.html class=pageActive>Contact</a></li>
+<li><a href=mentionslegales.html>Mentions légales</a></li>
+</ul>
+</div>
+</section>
+</div>
+<div id=copyright>
+<p>
+Copyright &copy; Greta Bretagne Sud
+</p>
+</div>
+</footer>
+<script src=scripts/jquery-1.9.0.min.js></script>
+<script>$("#burger i").click(function(){$("#menuPrincipal ul").addClass("on").slideToggle(1500)});$("#rgpd").click(function(){$("#envoyer").css("background","rgb(26, 169, 26)").prop("disabled",false);$("#contact p:nth-of-type(8) input").css("color","white").css("cursor","pointer")});$("#envoyer").click(function(){alert("Votre demande à bien été prise en compte !")});</script>
+</body>
+</html>
